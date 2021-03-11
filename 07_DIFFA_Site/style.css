@@ -1,0 +1,771 @@
+/*----------------------------GENERAL---------------------------*/
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,wght@0,200;0,300;0,400;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,600;1,700;1,800;1,900&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito Sans', sans-serif;}
+
+p{
+    font-size: 1.05em;
+    color : #024856;
+}
+h1 {
+    text-align: center;
+    text-transform: uppercase;
+    padding: 40px 0;
+    color: #BF321D;
+    font-weight: bold;
+}
+
+h3 {
+    padding: 20px 0;
+    font-size: 1.6em;
+}
+
+.featurette-divider {
+    margin: 4rem 0;
+    background-color: #024856;
+    border: solid #024856 2.5px;
+}
+
+.langues {
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    padding: 10px;
+    background-color: #024856;
+    color: white;
+    font-size: 1em;
+}
+
+@media screen and (min-width: 768px) {
+    .langues {
+        font-size: 1.2em;
+        top: 40px;
+        left: 40px;
+    }
+}
+
+.img-grey{
+    filter: grayscale(1);
+    -webkit-filter: grayscale(1);
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.img-grey:hover{
+    filter: none;
+    -webkit-filter: grayscale(0);
+    -webkit-transform: scale(1.01);
+}
+
+.img-blur{
+    filter:blur(2px);
+    -webkit-filter:blur(2px);
+    -webkit-transition: all 0.2s ease-in-out;
+}
+
+.img-blur:hover{
+    filter: none;
+    -webkit-filter: blur(0px);
+    -webkit-transform: scale(1.01);
+}
+
+.retour a{
+    text-align: center !important;
+    margin: 20px 0 !important;
+    text-transform: capitalize !important;
+    text-decoration: none !important;
+    color: #024856 !important;
+    font-weight: bold !important;
+    font-size: 1.2em !important;
+}
+
+/*----------------------------Page Index---------------------------*/
+#accueilChoix {
+    max-height: 100vh;
+}
+
+#leRestaurantPage {
+    background: url(images/interieur1.jpg);
+}
+
+#lAnnexePage {
+    background: url(images/interieur2.jpg);
+
+}
+
+#lAnnexePage,
+#leRestaurantPage {
+    height: 50vh;
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#lAnnexePage img,
+#leRestaurantPage img {
+    max-width: 1024px;
+    width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+
+    #lAnnexePage,
+    #leRestaurantPage {
+        height: 100vh;
+    }
+}
+
+/*----------------------------Page Admin---------------------------*/
+.form-signin {
+    width: 100vh;
+    max-width: 500px;
+    margin: 10% auto;
+    padding: 30px;
+    border-radius: 20px;
+    color: white;
+    background-color: #024856;
+}
+
+.form-signin .checkbox {
+    font-weight: 400;
+}
+
+.form-signin label {
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+.form-signin .form-control {
+    position: relative;
+    box-sizing: border-box;
+    height: auto;
+    padding: 10px;
+    font-size: 16px;
+}
+
+.form-signin .form-control:focus {
+    z-index: 2;
+}
+
+.form-signin input[type="email"] {
+    margin-bottom: -1px;
+    border-bottom-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+.form-signin input[type="password"] {
+    margin-bottom: 10px;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+}
+
+/*----------------------------Menu---------------------------*/
+.wrapper {
+    background-color: #FFFFFF;
+    position: relative;
+}
+
+.wrapper::before,
+.wrapper::after {
+    position: fixed;
+    content: "";
+    width: 100%;
+    background-color: #FFFFFF;
+    z-index: 111;
+}
+
+.wrapper::before {
+    bottom: 0;
+}
+
+.wrapper::after {
+    top: 0;
+}
+
+#Header {
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    width: 100%;
+    padding: 10px 0 0;
+    transition: all 0.2s;
+    background: #024856 !important;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+}
+
+#Header.main-header {
+    z-index: 91;
+    transition: all 0.2s;
+}
+
+#Header.main-header.headershade {
+    padding: 50px 0 35px;
+    background: rgba(222, 222, 222, 0.1);
+    transition: all 0.2s;
+}
+
+#Header.main-header .logo-and-menu-container {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+#Header.main-header .logo-and-menu-container .logo-section .header-logo {
+    display: inline-flex;
+    width: 70px;
+    height: 54px;
+    position: relative;
+    z-index: 101;
+}
+
+#Header.main-header .logo-and-menu-container .logo-section .header-logo .curtain {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 70px;
+    height: 54px;
+}
+
+#Header.main-header .logo-and-menu-container .logo-section .header-logo img {
+    width: 100%;
+    height: auto;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+#Header.main-header .logo-and-menu-container .logo-section .header-logo::after {
+    display: none;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section {
+    flex-grow: 1;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks {
+    display: flex;
+    justify-content: flex-end;
+    position: relative;
+    width: 25px;
+    float: right;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks .menu-bar {
+    width: 24px;
+    height: 26px;
+    text-align: center;
+    display: block;
+    z-index: 101;
+    transform: all ease 0.3s;
+    margin-top: 9px;
+    animation: blinkBackground 4s infinite;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks .menu-bar span {
+    background: #F4A00F;
+    border: none;
+    height: 2px;
+    width: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0;
+    transition: all 0.35s ease;
+    cursor: pointer;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks .menu-bar span:nth-of-type(2) {
+    top: 10px;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks .menu-bar span:nth-of-type(3) {
+    top: 20px;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks .menu-bar.active span:nth-child(1) {
+    transform: translateY(10px) translateX(0) rotate(45deg);
+    background: #F4A00F;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks .menu-bar.active span:nth-child(2) {
+    opacity: 0;
+    background: #F4A00F;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks .menu-bar.active span:nth-child(3) {
+    transform: translateY(-10px) translateX(0) rotate(-45deg);
+    background: #F4A00F;
+}
+
+#Header.main-header .logo-and-menu-container .menu-section .menu-items-blocks .menu-bar::after {
+    display: none;
+}
+
+.overlay {
+    position: fixed;
+    padding: 50% 0;
+    display: flex;
+    justify-content: space-between;
+    background: #024856 !important;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 0%;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.35s, visibility 0.35s, height 0.35s;
+    overflow: hidden;
+    z-index: 11;
+}
+
+.overlay.open {
+    opacity: 1;
+    visibility: visible;
+    height: 100%;
+}
+
+.overlay.open li {
+    animation: fadeInRight 0.5s ease forwards;
+    animation-delay: 0.35s;
+}
+
+.overlay.open li:nth-of-type(2) {
+    animation-delay: 0.4s;
+}
+
+.overlay.open li:nth-of-type(3) {
+    animation-delay: 0.45s;
+}
+
+.overlay.open li:nth-of-type(4) {
+    animation-delay: 0.5s;
+}
+
+.overlay nav {
+    display: flex;
+    font-size: 50px;
+    font-weight: 400;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.overlay nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0 auto;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    color: #F4A00F;
+
+}
+
+.overlay nav ul li {
+    display: block;
+    height: auto;
+    color: #F4A00F;
+    padding: 2rem 0;
+    min-height: 55px;
+    position: relative;
+    opacity: 0;
+    text-transform: uppercase;
+}
+
+.overlay nav ul li a {
+    font-size: 26px;
+    display: block;
+    position: relative;
+    color: #F4A00F;
+    text-decoration: none;
+    overflow: hidden;
+}
+
+.overlay nav ul li a::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 0%;
+    transform: translateX(-50%);
+    height: 3px;
+    background: #F4A00F;
+    transition: 0.35s;
+    color: #F4A00F;
+}
+
+
+.overlay ul li a:hover:after,
+.overlay ul li a:focus:after,
+.overlay ul li a:active:after {
+    width: 100%;
+
+}
+
+@keyframes fadeInRight {
+    0% {
+        opacity: 0;
+        top: -5%;
+    }
+
+    100% {
+        opacity: 1;
+        top: 0;
+    }
+}
+
+body.menu-open {
+    overflow: hidden;
+}
+
+body.menu-open #Header.main-header .logo-and-menu-container .logo-section .header-logo .logo-vector path {
+    stroke-width: 0;
+    animation: dashfill 1s ease-in-out 0s forwards;
+}
+
+@-webkit-keyframes dashfill {
+    0% {
+        stroke: #000;
+        fill-opacity: 0;
+        stroke-width: 0;
+    }
+
+    50% {
+        stroke: #F4A00F;
+        fill-opacity: 0.5;
+        stroke-width: 10;
+    }
+
+    100% {
+        stroke: #F4A00F;
+        fill-opacity: 1;
+        stroke-width: 20;
+    }
+}
+
+@-moz-keyframes dashfill {
+    0% {
+        stroke: #F4A00F;
+        fill-opacity: 0;
+        stroke-width: 0;
+    }
+
+    50% {
+        stroke: #F4A00F;
+        fill-opacity: 0.5;
+        stroke-width: 10;
+    }
+
+    100% {
+
+        stroke: #F4A00F;
+        fill-opacity: 1;
+        stroke-width: 20;
+    }
+}
+
+
+@media screen and (min-width: 768px) {
+    .main-header {
+        visibility: hidden;
+    }
+
+}
+
+
+
+/*------------------------Page Restaurant Menu Tablette et PC--------------------*/
+
+#menuTablette img {
+    max-width: 300px;
+}
+
+#menuTablette{
+    z-index: 300;
+    background-color:rgba(0, 0, 0, 0.80);
+}
+
+#menuTablette ul {
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    max-width: 1400px;
+    margin: auto;
+}
+#menuTablette li a {
+    color: #f2f2f2;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 1em;
+    width: 100%;
+    height: 100%;
+    padding: 5px;  
+    -webkit-transition: all 0.2s ease-in-out;
+    border-right : solid 1.5px white;
+    border-left : solid 1.5px white;
+}
+
+#menuTablette ul {
+    display: none;
+}
+*/
+#menuTablette a {
+    float: left;
+    display: block;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+}
+  
+#menuTablette li a:hover {
+    background-color: #F4A00F;
+    text-decoration: none;
+    animation-duration: 0.3s;
+}
+
+  /* The sticky class is added to the navbar with JS when it reaches its scroll position */
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
+  /* Add some top padding to the page content to prevent sudden quick movement (as the navigation bar gets a new position at the top of the page (position:fixed and top:0) */
+  .sticky + .content {
+    padding-top: 60px;
+  }
+@media screen and (min-width: 768px) {
+
+    #menuTablette ul {
+        display: flex;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+
+    #menuTablette li a {
+        padding: 30px 30px;
+
+    }
+
+}
+/*----------------------------Page Restaurant Section1---------------------------*/
+
+#section1 {
+    height: 100vh;
+    background: url(images/interieur1.jpg);
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+}
+
+#section1 img {
+    max-width: 1024px;
+    width: 80%;
+}
+
+.lacartebouton{
+    color: #f2f2f2;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2em;
+    padding: 15px;  
+    background-color: #F4A00F;
+    outline: 1px solid white;
+    outline-offset: -6px;
+
+}
+
+/*----------------------------Page Restaurant Le Restaurant---------------------------*/
+#lerestaurant {
+    margin: 20px auto 50px auto !important;
+    max-width: 1600px;
+}
+
+#lerestaurant img {
+    width: 100%;
+}
+
+#lerestaurant p {
+    padding: 2rem 0 0;
+}
+
+#lerestaurantImgDesactivee {
+    display: none;
+
+}
+
+@media screen and (min-width: 768px) {
+    #lerestaurantImgDesactivee {
+        display: block;
+    }
+}
+
+/*----------------------------Page Restaurant La Carte---------------------------*/
+#lacarte{
+   
+}
+
+#laCarte p,
+#laCarte h2 {
+    padding: 20px;
+}
+
+.carousel {
+    margin-bottom: 4rem;
+}
+
+.carousel-caption {
+    bottom: 3rem;
+    z-index: 10;
+}
+
+.carousel-item {
+    height: 32rem;
+}
+
+.carousel-item>img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-width: 100%;
+    height: 32rem;
+}
+
+/* RESPONSIVE CSS------------------------------------ */
+
+@media (min-width: 40em) {
+
+    .carousel-caption p {
+        margin-bottom: 1.25rem;
+        font-size: 1.25rem;
+        line-height: 1.4;
+    }
+}
+
+/*----------------------------Page Restaurant Illustrations------------------------*/
+#illustrations {
+        margin: 30px auto !important;
+        padding: 20px 0!important;
+        max-width: 1400px;
+}
+
+#illustrations h2 {
+    text-align: center;
+    padding:20px;
+}
+
+#illustrations .col-lg-4 {
+    margin-bottom: 1.5rem;
+    text-align: center;
+}
+
+#illustrations p {
+    text-align: left;
+    padding: 20px;
+}
+
+/*----------------------------Page Restaurant aPropos---------------------------*/
+#aPropos{
+    margin: 20px auto 50px auto !important;
+    max-width: 1400px;
+}
+#aPropos h2 {
+    font-weight: 400;
+}
+
+#aPropos .col-lg-4 p {
+    margin-right: .75rem;
+    margin-left: .75rem;
+}
+
+.aPropos-rouge {
+    color: #BF321D;
+}
+
+.aPropos-heading {
+    font-weight: 300;
+    line-height: 1;
+    /* rtl:remove */
+    letter-spacing: -.05rem;
+}
+
+.aPropos iframe {
+    min-height: 250px;
+}
+
+@media (min-width: 40em) {
+
+    .aPropos-heading {
+        font-size: 50px;
+    }
+}
+
+@media (min-width: 62em) {
+    .aPropos-heading {
+        margin-top: 7rem;
+    }
+}
+
+/*----------------------------Page Restaurant Informations-------------------------*/
+
+.reseaux {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    align-items: center;
+    align-content: flex-start;
+}
+
+.reseaux svg {
+    margin: 0 15px 0 0;
+}
+
+#carteMaps {
+    margin: 40px 0;
+    ;
+}
+
+/*----------------------------Page Restaurant Footer---------------------------*/
+.mentions {
+    padding: 10px 0;
+    background-color: #F4A00F;
+    color: white;
+    display: flex;
+	flex-direction: row;
+	flex-wrap: nowrap;
+	justify-content: center;
+	align-items: center;
+	align-content: center;
+}
+
+.mentions p{
+    margin : 0;
+
+}
+.mentions p a{
+    color: white;
+    text-decoration:none;
+}
